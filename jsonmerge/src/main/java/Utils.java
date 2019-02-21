@@ -48,18 +48,6 @@ public class Utils {
                 output.put(key, value);
             } else if (returnedValue instanceof Map) {
                 mergeMaps((Map<String, Object>) value, (Map<String, Object>) returnedValue);
-            } else if (returnedValue instanceof List) {
-                mergeLists((List) value, (List) returnedValue);
-            }
-        }
-
-    }
-
-    private static void mergeLists(List input, List output) {
-
-        for (Object in : input) {
-            if (!output.contains(in)) {
-                output.add(in);
             }
         }
 
